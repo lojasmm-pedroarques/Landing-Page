@@ -1,0 +1,33 @@
+.navegacao button:focus {
+    color:#FFFFFF;
+    background: black;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.navegacao {
+    display: flex;
+}
+
+
+.paginacao:nth-child(2) {
+    border-left: 1px solid rgb(220, 220, 220);
+    border-right: 1px solid rgb(220, 220, 220);
+}
+
+.paginacao {
+    display: inline-block;
+    font-size: 4vw;
+    padding: 20px;
+    margin: 0 auto;
+    flex-grow: 3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 0;
+}
+
+.container {
+    background: black;
+    justify-content: space-around;
+    align-items: center;
+    background:rgb(220, 220, 220);
+}
