@@ -1,0 +1,95 @@
+$smooth_red: #e98f8f;
+
+@media screen and (min-width : 1000px) { 
+    .video{
+        &__player {width:700px; height:500px;
+        } 
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width : 750px) { 
+    .video{
+        &__player {width:450px; height:300px; 
+        } 
+    }
+}
+
+@media screen and (max-width: 700px) { 
+    .video {
+        &__player {width:300px; height:180px; }}
+    .opinions {
+        &__cards {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    .video {
+        &__player {width:250px; height:180px; }}
+    .opinions {
+        &__cards {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+p {
+    text-align: center;
+}
+
+mat-card-content p {
+    padding-top: 40px;
+    border-top: 1px solid #bbbbbb;
+}
+
+
+.opinions {
+    display: flex;
+    margin-top: 20px;
+
+    &__cards {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        border-bottom: 5px solid black;
+            
+    }
+
+    &__card {
+        width: 200px;
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    &__image {
+        clip-path: circle(30.0% at 50% 50%);
+        width: 150px;
+        padding: 20px;
+    }
+
+
+}
+
+section h1 {
+    padding-top: 8px;
+}
+
+.video {
+    background-color: $smooth_red;
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+    padding: 50px 0 15px 0;
+    background-color: $smooth_red;
+}
+
+.redirect-vagas {
+    color: white;
+    background-color: maroon;
+    text-align: center;
+}

@@ -1,0 +1,56 @@
+.text {
+    text-align: right;
+}
+
+.button-saibamais {
+    color: #FFFFFF;
+    background-color: #3e50da;
+}
+
+.header {
+    background-color: black;
+    height: 2.2rem;
+    color:white;
+    justify-content: center;
+    align-items: baseline;
+}
+
+mat-card-content img {
+    width: 100%;
+}
+
+.cards {
+    &__card {
+        width: 200px;
+        height: 300px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 2px solid black;
+        box-shadow: 2px -2px black;
+
+        &:hover {
+            .button-saibamais {
+                color: #FFFFFF;
+                background-color: #00129e;
+                transition: 1s;
+            }
+            width:210px;
+            height: 310px;
+            transition: 1s;
+
+        }
+    }
+
+    &__vagas {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        flex-wrap: wrap;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+}

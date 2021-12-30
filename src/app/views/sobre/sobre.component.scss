@@ -1,0 +1,87 @@
+$smooth_red: #e98f8f;
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+
+    &__card {
+        background-color: crimson;
+        max-width: 180px;
+        max-height: 200px;
+        text-align: center;
+
+    }
+
+    &__image {
+        width: 30%;
+    }
+}
+
+.placeholder {
+
+    &__info {
+        display: flex;
+        align-items: center;
+        background-color: $smooth_red;
+        min-height: 400px;
+        letter-spacing: 1.5px;
+
+    }
+
+    &__text {
+        margin-left: 5px;
+    }
+
+    &__image {
+        max-width: 50%;
+        border-radius: 5px 0 0 5px;
+    }
+
+}
+
+.button {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.button-saibamais {
+    background-color: maroon;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 800px) and (min-width: 200px)  { 
+    .text {
+        border-bottom: $smooth_red solid 14px;
+    }
+    
+    .cards {
+        flex-wrap: wrap;
+
+        &__card {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            
+        }
+    }
+
+    .placeholder {
+
+        &__info {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__text {
+            margin: 10px 0 10px 0;
+            order: 2;
+        }
+    
+        &__image {
+            min-width: 100%;
+            border-radius: 0;
+            order: 1;
+        }
+    }
+}
