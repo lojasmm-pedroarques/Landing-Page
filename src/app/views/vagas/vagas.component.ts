@@ -14,7 +14,6 @@ export class VagasComponent implements OnInit {
     const div = this.renderer.createElement('div');
     
     for(let i = 0; i < vagas.length; i++) {
-      console.log(this.el.nativeElement)
       const matCard = this.renderer.createElement('mat-card');
       this.renderer.addClass(matCard, 'mat-card')
       this.renderer.addClass(matCard, 'cards__card')
