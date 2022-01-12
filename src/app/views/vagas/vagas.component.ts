@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import Vagas from './vagas';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
+import vagas from '../../../../output.json'
 
 @Component({
   selector: 'app-vagas',
@@ -8,26 +8,37 @@ import Vagas from './vagas';
 })
 export class VagasComponent implements OnInit {
 
-  constructor() {
+  
+  constructor(private renderer: Renderer2, private el: ElementRef) {
+
+    const div = this.renderer.createElement('div');
+    
+    for(let i = 0; i < vagas.length; i++) {
+      console.log(this.el.nativeElement)
+      const matCard = this.renderer.createElement('mat-card');
+      this.renderer.addClass(matCard, 'mat-card')
+      this.renderer.addClass(matCard, 'cards__card')
+
+
+      const title = this.renderer.createElement('mat-card-title');
+      const titleText = this.renderer.createText(vagas[i].titulo);
+      this.renderer.appendChild(title, titleText);
+      this.renderer.addClass(matCard, 'mat-card-title')
+
+      const matCardContent = this.renderer.createElement('mat-card-content');
+      const matCardContentText = this.renderer.createText(vagas[i].descricao)
+      this.renderer.appendChild(matCardContent, matCardContentText)
+      
+      this.renderer.appendChild(matCard, title);
+      this.renderer.appendChild(matCard, matCardContent);
+      this.renderer.appendChild(div, matCard);
+
+    }
+    this.renderer.appendChild(this.el.nativeElement, div);
+
    }
-   
    ngOnInit(): void {
-     this.oi()
+    
   }
-  
 
-  oi() {
-    fetch(`postgres://postgres:1234@localhost:5432/landing_page`)
-    .then(res => res.json())
-    .then((res: Vagas) => {
-      console.log(Vagas)
-
-    })};
-
-  vagas: Vagas[] = [{
-    categoria: 'a',
-    titulo: 'a',
-    descricao: 'a'
-  }]
 }
-  
