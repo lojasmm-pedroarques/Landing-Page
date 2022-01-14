@@ -12,21 +12,14 @@ export class VagasComponent implements OnInit {
 
   
   constructor(private renderer: Renderer2, private el: ElementRef) {
+
+    //gera uma lista de imagens que serão usadas como placeholders nos cards
     var image_list = new Array('../../../assets/images/images-cards/1.jpg', '../../../assets/images/images-cards/2.jpg', 
     '../../../assets/images/images-cards/3.jpg', '../../../assets/images/images-cards/4.jpg', '../../../assets/images/images-cards/5.jpg',
     '../../../assets/images/images-cards/6.webp', '../../../assets/images/images-cards/7.jpg', '../../../assets/images/images-cards/8.jpg', 
     '../../../assets/images/images-cards/9.jpg', '../../../assets/images/images-cards/10.jpg', '../../../assets/images/images-cards/11.jpg',
     '../../../assets/images/images-cards/12.webp', '../../../assets/images/images-cards/13.jpg', '../../../assets/images/images-cards/14.webp',
     '../../../assets/images/images-cards/15.webp', '../../../assets/images/images-cards/16.jpg', '../../../assets/images/images-cards/17.webp',)
-
-    var set = new Set()
-    for(let i = 0; i < vagas.length; i++) {
-      set.add(vagas[i].categoria);
-     }
-
-    //declara a lista e atribuí os valores que estão no set
-    var list: any;
-    list = Array.from(set);
     
     //cria a div que irá conter os cards
 
@@ -35,6 +28,7 @@ export class VagasComponent implements OnInit {
     
     for(let i = 0; i < vagas.length; i++) {
 
+      //para cada item na lista de vagas é gerado um card
       var randomNum = Math.floor(Math.random() * image_list.length);
 
       const matCard = this.renderer.createElement('mat-card');
