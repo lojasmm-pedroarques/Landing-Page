@@ -51,8 +51,11 @@ export class VagasComponent implements OnInit {
 
       const matCardContent = this.renderer.createElement('mat-card-content');
       const matCardContentText = this.renderer.createText(vagas[i].descricao);
+      const matCardContentTextDiv = this.renderer.createElement('div');
+      this.renderer.addClass(matCardContentTextDiv, 'cards__text');
       this.renderer.appendChild(matCardContent, matCardImage);
-      this.renderer.appendChild(matCardContent, matCardContentText);
+      this.renderer.appendChild(matCardContentTextDiv, matCardContentText);
+      this.renderer.appendChild(matCardContent, matCardContentTextDiv);
       
       const matCardActions = this.renderer.createElement('mat-card-actions');
       const matCardActionsButton = this.renderer.createElement('button');

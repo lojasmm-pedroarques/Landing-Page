@@ -29,3 +29,10 @@
     background:rgb(220, 220, 220);
     border-bottom: 2px solid black;
 }
+
+@media screen and (max-width: 700px) and (min-width : 200px) { 
+    .paginacao {
+        font-size: 5vw;
+    }
+}
+
