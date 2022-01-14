@@ -1,6 +1,6 @@
 # LandingPage
 
-Criado com [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+Criado com [Angular CLI](https://github.com/angular/angular-cli) 13.0.4.
 
 ## servidor de desenvolvimento
 
